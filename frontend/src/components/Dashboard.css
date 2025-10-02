@@ -1,0 +1,394 @@
+.dashboard-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dashboard-header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-icon {
+    color: #667eea;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #1a202c;
+}
+
+.header-left p {
+    font-size: 14px;
+    color: #718096;
+    margin: 0;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    color: #2d3748;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #fed7d7;
+    border-color: #fc8181;
+    color: #c53030;
+}
+
+.dashboard-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-icon {
+    color: #667eea;
+}
+
+.card-title h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #1a202c;
+}
+
+.add-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #5568d3;
+    transform: scale(1.05);
+}
+
+.add-form {
+    background: #f7fafc;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-form input {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.add-form input:focus {
+    border-color: #667eea;
+}
+
+.save-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.empty-state {
+    text-align: center;
+    color: #a0aec0;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.item {
+    background: #f7fafc;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    background: #edf2f7;
+    transform: translateX(4px);
+}
+
+.item.completed {
+    opacity: 0.6;
+}
+
+.item.completed .item-text {
+    text-decoration: line-through;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.item-time {
+    font-size: 12px;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.item-text {
+    font-size: 15px;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.item-detail {
+    font-size: 13px;
+    color: #718096;
+}
+
+.item-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.check-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.check-btn:hover {
+    background: #38a169;
+    transform: scale(1.1);
+}
+
+.empty-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background: #fc8181;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #f56565;
+    transform: scale(1.1);
+}
+
+/* Water Card Specific Styles */
+.water-card {
+    grid-column: span 2;
+}
+
+.water-content {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.water-visual {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.water-glass {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #edf2f7;
+    color: #cbd5e0;
+    transition: all 0.3s ease;
+}
+
+.water-glass.filled {
+    background: #4299e1;
+    color: white;
+    animation: fillWater 0.3s ease-out;
+}
+
+@keyframes fillWater {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.water-info {
+    text-align: center;
+}
+
+.water-info h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: #2d3748;
+}
+
+.water-controls {
+    display: flex;
+    gap: 16px;
+}
+
+.water-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.water-btn.plus {
+    background: #4299e1;
+    color: white;
+}
+
+.water-btn.plus:hover {
+    background: #3182ce;
+    transform: scale(1.1);
+}
+
+.water-btn.minus {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.water-btn.minus:hover {
+    background: #fc8181;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .water-card {
+        grid-column: span 1;
+    }
+
+    .water-content {
+        flex-direction: column;
+    }
+}
