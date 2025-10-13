@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://healthsphere-zomd.onrender.com';
+const API_URL = 'https://healthsphere-zomd.onrender.com/api'; // 👈 added /api
 
 const api = axios.create({
     baseURL: API_URL,
@@ -18,11 +18,10 @@ api.interceptors.request.use(
         }
         return config;
     },
-    (error) => {
-        return Promise.reject(error);
-    }
+    (error) => Promise.reject(error)
 );
 
+// ✅ All routes now include correct /api prefix automatically
 export const authAPI = {
     register: (userData) => api.post('/auth/register', userData),
     login: (credentials) => api.post('/auth/login', credentials),
