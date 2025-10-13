@@ -11,7 +11,6 @@ import {
     Plus,
     Check,
     X,
-    TrendingUp
 } from 'lucide-react';
 import './Dashboard.css';
 
